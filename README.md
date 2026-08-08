@@ -1,7 +1,7 @@
 # INTERFACING LED AND PWM, WITH LPC1768 ARM PROCESSOR.
 
 # AIM:    
-   To write an embedded c program to interface LED and PWM with ARM processor          LPC1768
+   To write an embedded c program to interface LED and PWM with ARM processor          LPC1768 and Arduino.
           
 # COMPONENTS REQUIRED:
 ##  HARDWARE:
@@ -102,6 +102,23 @@ int main()
         }
     }                              
 }
+```
+## ARDUINO PROGRAM:
+```
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  Serial.println("LED ON");
+  delay(1000);
+
+  digitalWrite(LED_BUILTIN, LOW);
+  Serial.println("LED OFF");
+  delay(1000);
+}
 
 ```
 
@@ -110,10 +127,12 @@ int main()
 
 <img width="647" height="472" alt="image" src="https://github.com/user-attachments/assets/4fb09954-d4b6-47bd-9f05-33de7ce20c5d" />
 
+## ARDUINO OUTPUT:
+<img width="873" height="131" alt="image" src="https://github.com/user-attachments/assets/3abf0731-6cb3-4cac-82ae-86ff69de4277" />
 
 
 # Result :
-Thus,an embedded C program is written in order to interface PWM with LPC1768.
+Thus,an embedded C program is written in order to interface PWM with LPC1768 and in Arduino.
 
 
 
